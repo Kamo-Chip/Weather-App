@@ -1,1 +1,1 @@
-Weather app built using openweather api
+# Weather app built using openweather api
