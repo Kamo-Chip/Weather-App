@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+body{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    font-family:arial;
+    background-color:#50e9c842;
+    position: relative;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.flexify-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexify-column{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Options container styles*/
+.options-container, .forecast-container{
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.options-container{
+    width: 15vw;
+    /* background-color: aquamarine; */
+}
+
+.logo-container{
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0 0 10px;
+    font-size: 2.5rem;
+}
+
+.logo{
+    /* transform: scale(0.2); */
+    height: 90px;
+    width: 90px;
+    
+}
+
+.logo-container p{
+    height: fit-content;
+    width: fit-content;
+    margin: 0;
+}
+/*Main container styles*/
+.main-container{
+    align-self: center;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.vertical-line{
+    border-left: 3px solid #000;
+    height: 100vh;
+    width: 3px;
+    position: fixed;
+    top: 0;
+}
+
+.right{
+    right: 19vw;
+}
+.search-container{
+    position: absolute;
+    top: 0;
+    margin: 20px 0 50px 0;
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+}
+
+.search-container input{
+    font-size: 1.5rem;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+.weather-div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 10px;
+    height:fit-content;
+    width: 50vw;
+    margin: 100px 0 0 50px;
+    background-color: rgb(93, 176, 253);
+    border: solid;
+    border-width: 4px;
+    /* background-color: rgb(255, 127, 127); */
+}
+
+.weather-container, .location-container{
+    height: 300px;
+    display: grid;
+    grid-template-rows: .5fr 1fr .5fr;
+}
+
+.location-container{
+    align-self: center;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 20px 0 0;
+}
+
+.location-container p{
+    margin: 20px 0 0 0;
+}
+.location-container img{
+    justify-self: center;
+    align-self: center;
+    transform: scale(1.5);
+}
+
+.weather-container button{
+    justify-self:left;
+    margin-left: 70px;
+}
+
+.weather-container button span{
+    padding: 0 30px 0 30px;
+}
+
+.temperature{
+    width: fit-content;
+    margin: 0;
+    font-size:5rem;
+    justify-self: center;
+}
+
+.temperature-container{
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.data-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+    height: fit-content;
+    width: 50vw;
+    margin: 2.5rem 0 0 50px;
+    justify-self: center;
+}
+
+.data-div{
+    border-radius: 20px;
+    background-color: rgb(93, 176, 253);
+    border-style: solid;
+    border-width: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(255, 127, 127); */
+}
+
+.data-div:hover, .weather-div:hover{
+    background-color: rgba(93, 176, 253, 0.63);;
+}
+
+.data-div p{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.data-div img{
+    height:70px;
+    width: 70px;
+    margin: 10px 10px 0 10px;
+}
+
+.location-div{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
+
+.locationIcon{
+    margin-right: 20px;
+}
+.location-div p{
+    font-size: 2.5rem;
+}
+
+.flag{
+    transform: scale(0.5);
+}
+
+.temperature-container div{
+    font-size: 1.5rem;
+}
+
+.temperature-container div p{
+    margin: 5px 0 0 0;
+}
+
+/*Forecast container styles*/
+.forecast-container{
+    position: absolute;
+    right: 0;
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 20vw;
+    /* background-color: rgb(127, 182, 255); */
+}
+
+.timeframe-container{
+    justify-self: center;
+    height: 40px;
+    width: 170px;
+    position: absolute;
+    top: 0;
+    padding-top: 20px
+}
+
+.timeframe-container p{
+    text-align: center;
+    height: 40px;
+    width: 90px;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.timeframe-container img{
+    height: 40px;
+    width: 40px;
+}
+
+.day{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    font-size: 1.8rem;
+    width: 20vw;
+    border-bottom: 2px solid #000;
+}
+
+.day:hover{
+    background-color:rgba(221, 221, 221, 0.753);
+}
+.forecasts{
+    height: 20vw;
+    
+}
+
+.day p{
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
+/*General styles*/
+.weather-div, .data-div{
+    border-radius: 20px;
+}
+
+button{
+    font-size: 1.5rem;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #000;
+    background-color: #fff;
+}
+
+h1{
+    text-align: center;
+}
+span:hover{
+    text-decoration: underline;
+}
