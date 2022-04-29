@@ -11,31 +11,29 @@ import Wind from "./wind.png";
 let isCelsius = true;
 
 export function setupSections(){
-    const optionsContainer = setupOptionsContainer();
+    const container = document.createElement("div");
+    container.classList.add("container");
+
+    const logoContainer = setupOptionsContainer();
 
     const mainContainer = setupMainContainer();
 
     const forecastContainer = setupForecastContainer();
 
-    document.body.append(optionsContainer, mainContainer, forecastContainer);
+    container.append(logoContainer, mainContainer, forecastContainer);
+
+    document.body.appendChild(container);
 }
 
 function setupOptionsContainer(){
     const optionsContainer = document.createElement("div");
-    optionsContainer.classList.add("options-container", "flexify-column");
+    optionsContainer.classList.add("logo-container", "flexify-column");
 
     const logo = new Image();
     logo.src = Logo;
-    logo.classList.add("logo")
+    logo.classList.add("logo");
 
-    const logoContainer = document.createElement("div");
-
-    const logoText = document.createElement("p");
-    logoText.innerText = "Weather";
-    logoContainer.classList.add("logo-container", "flexify-row");
-
-    logoContainer.append(logo, logoText);
-    optionsContainer.append(logoContainer);
+    optionsContainer.append(logo);
 
     return optionsContainer;
 }
@@ -92,7 +90,7 @@ function setupMainContainer(){
 
     divLocation.append(locationIcon, locationName, flag);
 
-    const temperatureContainer = document.createElement("p");
+    const temperatureContainer = document.createElement("div");
     temperatureContainer.classList.add("temperature-container");
 
     const temperature = document.createElement("p");
@@ -221,10 +219,7 @@ function setupMainContainer(){
 
     dataContainer.append(divChanceOfRain, divWindSpeed, divFeelsLike, divHumidity);
 
-    const vLine2 = document.createElement("div");
-    vLine2.classList.add("vertical-line", "right");
-
-    mainContainer.append(searchContainer, divWeather, dataContainer, vLine2);
+    mainContainer.append(searchContainer, divWeather, dataContainer);
 
     setupDom(flag, "Johannesburg", locationName, temperature, weather, weatherIcon, windSpeed, feelsLike, humidity, date, high, low);
     return mainContainer;
@@ -260,7 +255,14 @@ function setupForecastContainer(){
 
     timeframeContainer.append(backArrow, timeframe, forwardArrow);
 
-    forecastContainer.append(timeframeContainer);
+    const vLine2 = document.createElement("div");
+    vLine2.classList.add("vertical-line");
+
+    forecastContainer.appendChild(vLine2);
+
+    forecastContainer.appendChild(timeframeContainer)
+
+    console.log(timeframeContainer)
 
     return forecastContainer;
 }
@@ -401,7 +403,7 @@ async function loadForecast(cityName){
         if(timeframe.textContent == "Daily"){
             arr = dataJson.daily;
             const chanceOfRain = document.getElementById("chanceOfRain");
-            chanceOfRain.textContent = `${(((Number)(arr[0].pop)) * 100)}%`
+            chanceOfRain.textContent = `${(Math.round(((Number)(arr[0].pop)) * 100))}%`
     
         }else{
             let filledArray = dataJson.hourly;
@@ -410,8 +412,8 @@ async function loadForecast(cityName){
         
         div.innerHTML = null;
     
-        if(forecastContainer.children.length > 1){
-            forecastContainer.removeChild(forecastContainer.children[1]);
+        if(forecastContainer.children.length > 2){
+            forecastContainer.removeChild(forecastContainer.children[2]);
         }
         
         
@@ -439,5 +441,4 @@ async function loadForecast(cityName){
         forecastContainer.append(div);
     }catch(error){
     }
-    
 }   
