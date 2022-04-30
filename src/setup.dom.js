@@ -155,7 +155,7 @@ function setupMainContainer(){
     chanceOfRainIcon.src = Rain;
 
     const title1 = document.createElement("h1");
-    title1.textContent = "Chance of Rain";
+    title1.textContent = "P(Rain)";
 
     header1.append(chanceOfRainIcon, title1);
 
@@ -254,11 +254,6 @@ function setupForecastContainer(){
     });
 
     timeframeContainer.append(backArrow, timeframe, forwardArrow);
-
-    const vLine2 = document.createElement("div");
-    vLine2.classList.add("vertical-line");
-
-    forecastContainer.appendChild(vLine2);
 
     forecastContainer.appendChild(timeframeContainer)
 
@@ -369,7 +364,7 @@ async function setData(flag, cityName, name, temperature, weatherDescription, we
 function setDate(time, timeZone){
     let dateTokens = new Date((time + timeZone) * 1000).toDateString().split(" ");
 
-    return `${dateTokens[0]}, ${dateTokens[2]} ${dateTokens[1]} `;
+    return `${dateTokens[0]}`;
 }
 
 function setHour(time, timeZone){
@@ -412,8 +407,8 @@ async function loadForecast(cityName){
         
         div.innerHTML = null;
     
-        if(forecastContainer.children.length > 2){
-            forecastContainer.removeChild(forecastContainer.children[2]);
+        if(forecastContainer.children.length > 1){
+            forecastContainer.removeChild(forecastContainer.children[1]);
         }
         
         
