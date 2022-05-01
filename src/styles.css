@@ -4,6 +4,7 @@ body{
     font-family:arial;
     background-color: #19386d;
     margin: 0;
+    overflow-y: auto;
 }
 
 .flexify-row{
@@ -324,7 +325,7 @@ span:hover{
 
     .data-container{
         width: 90%;
-        height: 50%;
+        height: fit-content;
         margin-top: .5em;
     }
 
@@ -358,7 +359,7 @@ span:hover{
         flex-direction: column;
         align-items: center;
         width: 90%;
-        height: 50%;
+        height: 40%;
     }
     .logo-container{
         position: absolute;
@@ -398,20 +399,24 @@ span:hover{
         color: #000;
     }
 
-    @media (max-height: 600px){
+    @media (max-height: 840px){
 
         .main-container{
             height: 85%;
         }
 
+        .container{
+            overflow-y: auto;
+        }
+
         .timeframe-container{
             align-self: center;
             height: fit-content;
+            margin-top: 0;
         }
 
         .forecast-container{
-            height: 15%;
-            margin: 0;
+            height: 12.5%;
             margin-bottom: .5em;
         }
 
@@ -422,25 +427,40 @@ span:hover{
 
         .data-container{
             margin-top: .8em;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: none;
             width: 90vw;
-            overflow-y: auto;
         }
 
         .weather-div{
             height: fit-content;
         }
 
+        button{
+            width: fit-content;
+            color: #000;
+        }
+    }
+
+    @media (max-height: 700px){
+
+        .main-container{
+            height:fit-content;
+        }
+        .data-container{
+            margin-top: .5em;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: none;
+            width: 90vw;
+            overflow-x: auto;
+        }
         .data-div{
             height: 110px;
             width: 135px;
         }
 
-        button{
-            width: fit-content;
-            color: #000;
+        .forecast-container{
+            height: fit-content;
+           
         }
     }
 }
