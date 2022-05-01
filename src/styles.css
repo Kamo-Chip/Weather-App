@@ -384,7 +384,8 @@ span:hover{
     button{
         margin-bottom: 0;
         align-self: center;
-        
+        width: fit-content;
+        color: #000;
     }
 
     @media (max-height: 841px){
@@ -421,6 +422,11 @@ span:hover{
 
         .timeframe-container{
             margin-left: 2em;
+        }
+
+        button{
+            width: fit-content;
+            color: #000;
         }
     }
 }
