@@ -268,8 +268,9 @@ h1{
 }
 
 span{
-    width: 60px;
+    width: fit-content;
 }
+
 span:hover{
     text-decoration: underline;
 }
@@ -293,6 +294,7 @@ span:hover{
         height: 10%;
         width: fit-content;
         margin-top: .5rem;
+        align-self: center;
     }
 
     .timeframe-container img{
@@ -389,7 +391,7 @@ span:hover{
     button{
         margin-bottom: 0;
         align-self: center;
-        width: 135px;
+        width: fit-content;
         color: #000;
     }
 
@@ -400,7 +402,7 @@ span:hover{
         }
 
         .timeframe-container{
-            justify-self: center;
+            align-self: center;
             height: fit-content;
         }
 
@@ -433,7 +435,7 @@ span:hover{
         }
 
         button{
-            width: 135px;
+            width: fit-content;
             color: #000;
         }
     }
