@@ -145,7 +145,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 1rem;
-    max-height: 70%;
+    height: 40%;
     width: 100%;
     margin: 2rem 0 0 0;
 }
@@ -171,6 +171,7 @@ body{
 }
 .data-div p{
     text-align: center;
+    align-self: center;
 }
 
 .data-div img{
@@ -261,14 +262,13 @@ button{
     border-style: none;
     background-color: #fff;
     color: #000;
-
+    align-self: center;
 }
 
 h1{
-    margin: 0;
     font-size: 1.5rem;
-    align-self: center;
 }
+
 span:hover{
     text-decoration: underline;
 }
@@ -283,7 +283,7 @@ span:hover{
     .forecast-container{
         width: 90vw;
         max-width: 90vw;
-        height: 20%;
+        height: 15%;
         margin: 0 0 2.5rem 0;
     }
 
@@ -292,7 +292,6 @@ span:hover{
         height: 10%;
         width: fit-content;
         margin-top: .5rem;
-        margin-left: 1em;
     }
 
     .timeframe-container img{
@@ -303,7 +302,7 @@ span:hover{
     .forecasts{
         flex-direction: row;
         height: fit-content;
-        margin-top: 4rem;
+        margin-top: 2em;
         width: 100%;
     }
 
@@ -319,12 +318,17 @@ span:hover{
 
     .data-container{
         width: 90%;
-        height: 50%;
+        height: fit-content;
+        margin-top: .5em;
     }
 
     .data-div{
-        height: fit-content;
         padding: .2em;
+        height: 130px;
+    }
+
+    .data-div p{
+        margin: 0 0 1.5em 0;
     }
 
     h1{
@@ -391,19 +395,26 @@ span:hover{
     @media (max-height: 841px){
 
         .main-container{
-            height: 70%;
+            height: 85%;
         }
 
         .timeframe-container{
-            margin-left: 2em;
+            justify-self: center;
+            height: fit-content;
         }
 
         .forecast-container{
-            height: 20%;
-            margin-bottom: 3rem;
+            height: 15%;
+            margin-bottom: .5em;
+        }
+
+        .forecasts{
+            height: 100;
+            margin-top: 1.3em;
         }
 
         .data-container{
+            margin-top: .8em;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: none;
@@ -416,12 +427,8 @@ span:hover{
         }
 
         .data-div{
-            height: 130px;
+            height: 110px;
             width: 135px;
-        }
-
-        .timeframe-container{
-            margin-left: 2em;
         }
 
         button{
