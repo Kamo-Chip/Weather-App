@@ -398,7 +398,7 @@ span:hover{
         color: #000;
     }
 
-    @media (max-height: 841px){
+    @media (max-height: 840px){
 
         .main-container{
             height: 85%;
