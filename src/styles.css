@@ -292,6 +292,7 @@ span:hover{
         height: 10%;
         width: fit-content;
         margin-top: .5rem;
+        margin-left: 1em;
     }
 
     .timeframe-container img{
