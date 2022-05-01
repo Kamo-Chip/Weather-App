@@ -295,7 +295,6 @@ span:hover{
     }
 
     .timeframe-container{
-        margin-left: 5em;
         height: fit-content;
         width: fit-content;
         margin-top: .5em;
@@ -359,9 +358,9 @@ span:hover{
         flex-direction: column;
         align-items: center;
         width: 90%;
-        
         height: 40%;
     }
+
     .logo-container{
         position: absolute;
         height: fit-content;
