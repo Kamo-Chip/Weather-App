@@ -237,10 +237,6 @@ body{
     border-bottom: 2px solid #fff;
 }
 
-.day:hover{
-    background-color:rgba(221, 221, 221, 0.753);
-}
-
 .day p{
     padding-left: 20px;
 }
@@ -254,6 +250,8 @@ body{
 }
 
 button{
+    display: flex;
+    flex-direction: row;
     font-size: 1.5rem;
     width: fit-content;
     height: 2.5rem;
@@ -269,6 +267,9 @@ h1{
     font-size: 1.5rem;
 }
 
+span{
+    width: 60px;
+}
 span:hover{
     text-decoration: underline;
 }
@@ -388,7 +389,7 @@ span:hover{
     button{
         margin-bottom: 0;
         align-self: center;
-        width: fit-content;
+        width: 135px;
         color: #000;
     }
 
@@ -432,7 +433,7 @@ span:hover{
         }
 
         button{
-            width: fit-content;
+            width: 135px;
             color: #000;
         }
     }
