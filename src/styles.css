@@ -384,11 +384,34 @@ span:hover{
         
     }
 
-    /* @media (max-width: 320px){
-        .search-container{
+    @media (max-height: 841px){
 
+        .main-container{
+            height: 70%;
         }
-    } */
+
+        .forecast-container{
+            height: 20%;
+            margin-bottom: 3rem;
+        }
+
+        .data-container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: none;
+            width: 90vw;
+            overflow-y: auto;
+        }
+
+        .weather-div{
+            height: fit-content;
+        }
+
+        .data-div{
+            height: 130px;
+            width: 135px;
+        }
+    }
 }
 /*General styles*/
 
