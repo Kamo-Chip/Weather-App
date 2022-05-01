@@ -280,6 +280,8 @@ span:hover{
     .container{
         flex-direction: column;
         align-items: center;
+        height: 100vh;
+        width: 100vw;
     }
 
     .forecast-container{
@@ -291,9 +293,10 @@ span:hover{
 
     .timeframe-container{
         position: absolute;
+        margin-left: 2em;
         height: 10%;
         width: fit-content;
-        margin-top: .5rem;
+        margin-top: .5em;
         align-self: center;
     }
 
@@ -408,6 +411,7 @@ span:hover{
 
         .forecast-container{
             height: 15%;
+            margin: 0;
             margin-bottom: .5em;
         }
 
