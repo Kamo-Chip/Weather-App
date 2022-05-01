@@ -392,6 +392,10 @@ span:hover{
             height: 70%;
         }
 
+        .timeframe-container{
+            margin-left: 2em;
+        }
+
         .forecast-container{
             height: 20%;
             margin-bottom: 3rem;
