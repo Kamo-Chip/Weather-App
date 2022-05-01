@@ -2,8 +2,11 @@
 
 body{
     font-family:arial;
+    height: 100vh;
+    width: 100vw;
     background-color: #19386d;
     margin: 0;
+    overflow-y: auto;
 }
 
 .flexify-row{
@@ -48,7 +51,6 @@ body{
     font-weight: bold;
     width: 70%;
     max-width: 700px; 
-    min-height: 210px;
     height: 100%;
     align-items: center;
     padding: 0 1rem;
@@ -87,6 +89,7 @@ body{
     height: 30%;
     width: 100%;
     min-height: fit-content;
+    min-height: 300px;
     margin: 2rem 0 0 0;
     background-color: #546bab;
     border-style: none;
@@ -279,23 +282,21 @@ span:hover{
 @media (max-width: 767px){
 
     .container{
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-        width: 100vw;
+        display: grid;
+        grid-template-rows: auto auto;
     }
 
     .forecast-container{
         width: 90vw;
         max-width: 90vw;
-        height: 15%;
-        margin: 0 0 2.5rem 0;
+        height: fit-content;
+        margin: .5em 0;
+        justify-self: center;
     }
 
     .timeframe-container{
-        position: absolute;
         margin-left: 5em;
-        height: 10%;
+        height: fit-content;
         width: fit-content;
         margin-top: .5em;
         align-self: center;
@@ -309,7 +310,6 @@ span:hover{
     .forecasts{
         flex-direction: row;
         height: fit-content;
-        margin-top: 2em;
         width: 100%;
     }
 
@@ -325,7 +325,7 @@ span:hover{
 
     .data-container{
         width: 90%;
-        height: fit-content;
+        min-height: fit-content;
         margin-top: .5em;
     }
 
@@ -359,11 +359,11 @@ span:hover{
         flex-direction: column;
         align-items: center;
         width: 90%;
+        
         height: 40%;
     }
     .logo-container{
         position: absolute;
-        left: 0;
         height: fit-content;
         width: fit-content;
     }
