@@ -4,7 +4,6 @@ body{
     font-family:arial;
     background-color: #19386d;
     margin: 0;
-    overflow-y: auto;
 }
 
 .flexify-row{
@@ -398,15 +397,11 @@ span:hover{
         width: fit-content;
         color: #000;
     }
-
+/* 
     @media (max-height: 840px){
 
         .main-container{
             height: 85%;
-        }
-
-        .container{
-            overflow-y: auto;
         }
 
         .timeframe-container{
@@ -462,7 +457,7 @@ span:hover{
             height: fit-content;
            
         }
-    }
+    } */
 }
 /*General styles*/
 
